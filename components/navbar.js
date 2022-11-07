@@ -14,7 +14,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { IoLogoGithub } from "react-icons/io";
 
 const Navbar = () => {
   return (
@@ -46,14 +45,10 @@ const Navbar = () => {
           width={{ base: "full", md: "auto" }}
           alignItems="center"
           flexGrow={1}
-          mt={{ base: 4, nmd: 0 }}
+          mt={{ base: 2, nmd: 0 }}
         >
-          <Link href="#projects" as="a">
-            Projects
-          </Link>
-          <Link href="#contact" as="a">
-            Contact
-          </Link>
+          <Link href="projects">Projects</Link>
+          <Link href="#contact">Contact</Link>
         </Stack>
 
         <Box flex={1} align="right">

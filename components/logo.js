@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Text, useColorModeValue } from "@chakra-ui/react";
+import { Text, useColorModeValue, Image } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import FootprintIcon from "./icons/footprint";
 
@@ -26,14 +25,14 @@ const Logo = () => {
   return (
     <Link href="/" scroll={false}>
       <LogoBox>
-        <Text
-          color={useColorModeValue("gray.800", "whiteAlpha.900")}
-          fontFamily='M PLUS Rounded 1c", sans-serif'
-          fontWeight="bold"
-          ml={3}
-        >
-          Cesar Santamaria
-        </Text>
+        <Image
+          src="cs.png"
+          w="50px"
+          objectFit="cover"
+          alt="CS initials logo"
+          ml={{ base: 3, md: 20 }}
+          mt={4}
+        />
       </LogoBox>
     </Link>
   );
