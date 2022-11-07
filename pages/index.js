@@ -1,4 +1,4 @@
-import { Container, Box, Heading, Button } from "@chakra-ui/react";
+import { Container, Box, Heading } from "@chakra-ui/react";
 
 const Page = () => {
   return (
