@@ -25,20 +25,15 @@ const components = {
   },
   Link: {
     baseStyle: (props) => ({
-      color: mode("#fffff", "#ff63c3")(props),
+      color: mode("#000", "#fff")(props),
       textUnderlineOffset: 4,
     }),
   },
 };
 
-const colors = {
-  grassTeal: "#88ccca",
-};
-
 const config = {
-  initialColorMode: "dark",
-  useSystemColorMode: true,
+  initialColorMode: "light",
 };
 
-const theme = extendTheme({ config, styles, components, colors });
+const theme = extendTheme({ config, styles, components });
 export default theme;

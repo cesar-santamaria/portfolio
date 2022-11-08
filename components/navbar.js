@@ -14,6 +14,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import ThemeToggleButton from "./theme-toggle-button";
 
 const Navbar = () => {
   return (
@@ -21,7 +22,7 @@ const Navbar = () => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue("#ffffff40", "#20202380")}
+      bg={useColorModeValue("#ffffff40", "#20202340")}
       css={{ backdropFilter: "blur(10px)" }}
       zIndex={2}
     >
@@ -34,7 +35,7 @@ const Navbar = () => {
         justify="space-between"
       >
         <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={"tighter"}>
+          <Heading as="h1" size="md">
             <Logo />
           </Heading>
         </Flex>
@@ -47,11 +48,13 @@ const Navbar = () => {
           flexGrow={1}
           mt={{ base: 2, nmd: 0 }}
         >
-          <Link href="projects">Projects</Link>
+          <Link href="#projects">Projects</Link>
           <Link href="#contact">Contact</Link>
         </Stack>
 
         <Box flex={1} align="right">
+          <ThemeToggleButton />
+
           <Box ml={2} display={{ base: "inline-block", md: "none" }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
@@ -61,8 +64,12 @@ const Navbar = () => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem href="#projects">Projects</MenuItem>
-                <MenuItem href="#contact">Contact</MenuItem>
+                <MenuItem as="a" href="#projects">
+                  Projects
+                </MenuItem>
+                <MenuItem as="a" href="#contact">
+                  Contact
+                </MenuItem>
               </MenuList>
             </Menu>
           </Box>

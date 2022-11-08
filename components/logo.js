@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { Text, useColorModeValue, Image } from "@chakra-ui/react";
+import { useColorMode, useColorModeValue, Image } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import FootprintIcon from "./icons/footprint";
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -22,11 +21,13 @@ const LogoBox = styled.span`
 `;
 
 const Logo = () => {
+  const { toggleColorMode } = useColorMode();
+
   return (
-    <Link href="/" scroll={false}>
+    <Link href="/">
       <LogoBox>
         <Image
-          src="cs.png"
+          src={useColorModeValue("dark") ? "cs.png" : "cs-white.png"}
           w="50px"
           objectFit="cover"
           alt="CS initials logo"
