@@ -89,23 +89,16 @@ const Page = () => {
       </Section>
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          I ♥
+          ♥
         </Heading>
         <Paragraph>
-          Art, Music,{" "}
-          <Link
-            href="https://canadasoccer.com/profile/?id=2835&teamId=2079"
-            target="_blank"
-          >
-            Football
-          </Link>
-          , Traveling, Watching Formula 1
+          Coding, Music, Football (Soccer), Traveling, Formula One.
         </Paragraph>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title" mt={10}>
-          On the web
+          Socials
         </Heading>
         <List>
           <ListItem>
@@ -135,62 +128,95 @@ const Page = () => {
             </Link>
           </ListItem>
         </List>
+        <Box as="section" id="projects">
+          <Heading as="h3" variant="section-title" mt={10}>
+            Projects
+          </Heading>
+          <SimpleGrid columns={[1, 2, 2]} gap={10}>
+            <GridItem title="Hundy Hues">
+              <Image src="hundyhues.png" />
+              <Box display="flex" justifyContent="space-around" mx={1} my={3}>
+                <Link
+                  href="https://hundy-hues-frontend.onrender.com/"
+                  target="_blank"
+                >
+                  Live Site
+                </Link>
 
-        <Heading as="h3" variant="section-title" mt={10}>
-          Projects
-        </Heading>
-        <SimpleGrid columns={[1, 2, 2]} gap={10}>
-          <GridItem title="Remi">
-            <Image src="remi.png" />
-            <Box display="flex" justifyContent="space-around" mx={1} my={3}>
-              <Link href="https://www.google.ca" target="_blank">
-                Live Site
-              </Link>
-
-              <Link
-                href="https://github.com/cesar-santamaria/remi"
-                target="_blank"
-              >
-                Source Code
-              </Link>
-            </Box>
-            <Heading textAlign="center" fontSize="sm" mt={3}>
-              Remi Trivia Game
-            </Heading>
-            <Text textAlign="center" fontSize="xs" mb={2}>
-              ( MERN Stack / Typescript / Material Ui )
-            </Text>
-            <Paragraph>
-              Remi is single/multiplayer music trivia game. The Player with the
-              highest score wins!
-            </Paragraph>
-          </GridItem>
-          <GridItem title="Sendero">
-            <Image src="sendero.png" />
-            <Box display="flex" justifyContent="space-around" mx={1} my={3}>
-              <Link size="sm" href="https://www.google.ca" target="_blank">
-                Live Site
-              </Link>
-              <Link
-                size="sm"
-                href="https://github.com/cesar-santamaria/sendero"
-                target="_blank"
-              >
-                Source Code
-              </Link>
-            </Box>
-            <Heading textAlign="center" fontSize="sm" mt={3}>
-              Sendero - Job Tracking Application
-            </Heading>
-            <Text textAlign="center" fontSize="xs" mb={2}>
-              ( MERN Stack / Material UI / Redux - Toolkit )
-            </Text>
-            <Paragraph>
-              Sendero is a job tracking application. Users can categorize jobs
-              in one single app
-            </Paragraph>
-          </GridItem>
-        </SimpleGrid>
+                <Link
+                  href="https://github.com/cesar-santamaria/hundy-hues"
+                  target="_blank"
+                >
+                  Source Code
+                </Link>
+              </Box>
+              <Heading textAlign="center" fontSize="sm" mt={3}>
+                Hundy Hues
+              </Heading>
+              <Text textAlign="center" fontSize="xs" mb={2}>
+                ( PERN Stack / Stripe / Framer Motion )
+              </Text>
+              <Text>
+                Hundy Hues is an innovative e-commerce platform that offers a
+                curated collection of stylish furniture and home decor products.
+              </Text>
+            </GridItem>
+            <GridItem title="Sendero">
+              <Image src="sendero.png" />
+              <Box display="flex" justifyContent="space-around" mx={1} my={3}>
+                <Link
+                  size="sm"
+                  href="https://sendero-client.onrender.com/"
+                  target="_blank"
+                >
+                  Live Site
+                </Link>
+                <Link
+                  size="sm"
+                  href="https://github.com/cesar-santamaria/sendero"
+                  target="_blank"
+                >
+                  Source Code
+                </Link>
+              </Box>
+              <Heading textAlign="center" fontSize="sm" mt={3}>
+                Sendero - Job Tracking Application
+              </Heading>
+              <Text textAlign="center" fontSize="xs" mb={2}>
+                ( MERN Stack / Material UI / Redux - Toolkit )
+              </Text>
+              <Text>
+                Sendero is a job tracking application. Users can categorize jobs
+                in one single app
+              </Text>
+              <Text fontSize="sm">Login: JohnDoe@gmail.com </Text>
+              <Text fontSize="sm">Password: 12345678</Text>
+            </GridItem>
+            <GridItem title="Scheduler">
+              <Image src="scheduler.png" />
+              <Box display="flex" justifyContent="space-around" mx={1} my={3}>
+                <Link
+                  size="sm"
+                  href="https://github.com/cesar-santamaria/scheduler"
+                  target="_blank"
+                >
+                  Source Code
+                </Link>
+              </Box>
+              <Heading textAlign="center" fontSize="sm" mt={3}>
+                Interview Scheduler
+              </Heading>
+              <Text textAlign="center" fontSize="xs" mb={2}>
+                ( PERN Stack / Storybook )
+              </Text>
+              <Text>
+                Interview Scheduler is a single page React application that
+                allows mentors to book and cancel interviews with Lighthouse
+                Labs students.
+              </Text>
+            </GridItem>
+          </SimpleGrid>
+        </Box>
 
         <Box as="section" id="contact" align="center" my={4}>
           <Button
